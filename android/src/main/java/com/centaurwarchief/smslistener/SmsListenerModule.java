@@ -61,7 +61,8 @@ public class SmsListenerModule extends ReactContextBaseJavaModule implements Lif
 
     @Override
     public void onHostDestroy() {
-        unregisterReceiver(mReceiver);
+        // pause 상태(background)일 때도 계속 receive 하기.
+        //unregisterReceiver(mReceiver);
     }
 
     @Override
